@@ -8,7 +8,7 @@ import PyPDF2 as pdf
 load_dotenv()
 
 # configure gemini api
-# genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+#genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 genai.configure(api_key=st.secrets['GOOGLE_API_KEY'])
 
 # Gemini pro response
@@ -39,7 +39,8 @@ submit = st.button("Analyze Resume")
 if submit:
     if uploaded_file is not None:
         # Get the text from file
-        text = input_pdf_text(uploaded_file)        
+        text = input_pdf_text(uploaded_file)
+        inputs = {"Resume":[text], "Job Description":[jd]}        
         #Prompt Template
         input_prompt=f""" Hey Act Like a skilled or very experienced ATS(Application Tracking System)
                           with a deep understanding of tech field,software engineering,data science ,data analyst
@@ -49,9 +50,8 @@ if submit:
                           Assign the percentage Matching based on Job Description and Resume
                           Also show the missing keywords with high accuracy. Please go through Entire Resume and Job Description thorougly.
                             
-                          [Resume:{text}]
-                            
-                          [Job description:{jd}]
+                          Below is a your input dictionary which contains the content for Resume and Job Description
+                          {str(inputs)}
 
                           I want the 3 outputs by comparing above Resume and Job Description :
                           1. Percentage match of Resume with Job Desription 
