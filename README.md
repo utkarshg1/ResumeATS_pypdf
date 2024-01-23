@@ -4,6 +4,11 @@ Used Geminin Pro Generative AI for this application
 
 ---
 
+# Application Link
+Webapp Link : [https://smart-ats-utkarsh-gaikwad.streamlit.app/](https://smart-ats-utkarsh-gaikwad.streamlit.app/)
+
+---
+
 # How to run this application in VS Code
 ~~~cmd
 streamlit run app.py
