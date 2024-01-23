@@ -8,7 +8,8 @@ import PyPDF2 as pdf
 load_dotenv()
 
 # configure gemini api
-genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+# genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+genai.configure(api_key=st.secrets['GOOGLE_API_KEY'])
 
 # Gemini pro response
 def get_gemini_response(input):
