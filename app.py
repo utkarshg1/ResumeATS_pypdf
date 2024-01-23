@@ -46,7 +46,7 @@ if submit:
                           with a deep understanding of tech field,software engineering,data science ,data analyst
                           and big data engineer. Your task is to evaluate the resume based on the given job description.
                           You must consider the job market is very competitive and you should provide 
-                          best assistance for improving thr resumes. 
+                          best assistance for improving the Resume. 
                           Assign the percentage Matching based on Job Description and Resume
                           Also show the missing keywords with high accuracy. Please go through Entire Resume and Job Description thorougly.
                             
