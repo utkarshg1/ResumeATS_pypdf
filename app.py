@@ -49,14 +49,14 @@ if submit:
                           Assign the percentage Matching based on Job Description and Resume
                           Also show the missing keywords with high accuracy. Please go through Entire Resume and Job Description thorougly.
                             
-                          Resume:{text}
+                          [Resume:{text}]
                             
-                          Job description:{jd}
+                          [Job description:{jd}]
 
                           I want the 3 outputs by comparing above Resume and Job Description :
                           1. Percentage match of Resume with Job Desription 
                           2. Missing Keywords in Resume in bullet points
-                          3. Summary of the Resume in bullet points """
+                          3. Summary of the Resume in bullet points (Please note Here i want summary of RESUME ONLY) """
         
         # Gemini response
         response = get_gemini_response(input_prompt)
