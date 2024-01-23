@@ -38,8 +38,7 @@ submit = st.button("Analyze Resume")
 if submit:
     if uploaded_file is not None:
         # Get the text from file
-        text = input_pdf_text(uploaded_file)
-        print(text)
+        text = input_pdf_text(uploaded_file)        
         #Prompt Template
         input_prompt=f""" Hey Act Like a skilled or very experienced ATS(Application Tracking System)
                           with a deep understanding of tech field,software engineering,data science ,data analyst
